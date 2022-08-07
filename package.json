@@ -1,13 +1,13 @@
 {
   "name": "use-scrollspy",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "author": "@olivercederborg",
   "homepage": "https://github.com/olivercederborg/use-scrollspy#README",
   "description": "A configurable React hook that lets you associate links with sections of a page easily.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:olivercederborg/use-scrollspy.git"
+    "url": "https:git@github.com:olivercederborg/use-scrollspy.git"
   },
   "bugs": {
     "url": "https://github.com/olivercederborg/use-scrollspy/issues"
@@ -29,7 +29,7 @@
     "clean": "rimraf dist",
     "typecheck": "tsc --pretty --noEmit",
     "prettier": "prettier --write",
-    "release": "semantic-release"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -55,12 +55,26 @@
     "lint-staged": "12.3.8",
     "prettier": "2.6.2",
     "rimraf": "3.0.2",
+    "semantic-release": "^19.0.3",
     "tsup": "^6.2.1",
     "typescript": "4.6.3"
   },
   "lint-staged": {
     "src/*.{ts,tsx}": [
       "prettier --write"
+    ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
     ]
   }
 }
