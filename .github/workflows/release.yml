@@ -1,43 +1,33 @@
-name: Node.js CI
+name: Release
 
 on:
   push:
     branches:
       - main
-      
-  pull_request:
-    branches:
-      - main
-      
-env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: 'lts/*'
 
-    - name: NPM install
+    - name: Install dependencies
       run: npm ci
 
     - name: Make sure its clean 🧹
       run: npm run clean
-        
+
     - name: Run build 📦
       run: npm run build --if-present
 
-    - name: Semantic Release 🚀
-      run: npm run semantic-release
-      
+    - name: Release 🚀
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npx semantic-release
