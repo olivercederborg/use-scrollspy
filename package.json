@@ -52,5 +52,19 @@
     "rimraf": "3.0.2",
     "tsup": "^6.2.1",
     "typescript": "4.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run clean && npm run build"
+    }
+  },
+  "lint-staged": {
+    "src/**/**/*.{ts,tsx}": [
+      "tsc",
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
