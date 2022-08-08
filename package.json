@@ -1,6 +1,6 @@
 {
   "name": "use-scrollspy",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "@olivercederborg",
   "homepage": "https://github.com/olivercederborg/use-scrollspy#README",
   "description": "A configurable React hook that lets you associate links with sections of a page easily.",
