@@ -1,2 +1,42 @@
-# useScrollspy
-React scrollspy hook
+# use-scrollspy
+
+> React scrollspy hook
+
+## 🤔 What is it?
+
+The idea is to have a simple and easy to use hook that lets you pair page sections with links, to display which section is currently active.
+
+Check out my [personal website](https://olivercederborg.com) to see the hook in action.
+
+## 📦 Installation
+
+```sh
+npm i use-scrollspy
+
+# with yarn
+yarn add use-scrollspy
+```
+
+## 🚀 Usage
+
+```tsx
+import { useScrollspy } from 'use-scrollspy'
+
+useScrollspy({
+  ids: ['intro', 'projects', 'about', 'contact'], // ids of the sections to watch
+  hrefs: ['/#intro', '/#projects', '/#about', '/#contact'], // hrefs of the links to activate when section is active
+  offset: 'topCenter', // offset for when the section should be considered active
+  activeClass: 'active-nav-link', // class to apply to links when their section is active
+})
+```
+
+## 📝 Example
+
+Check out my [personal website](https://olivercederborg.com) to see the hook in action.<br>
+The code can be found [here](https://github.com/olivercederborg/olivercederborg.com/blob/main/app/components/navigation/navigation.tsx#L15-L20).
+
+## 🛣️ Roadmap
+
+- [x] Publish to NPM
+- [ ] Add more offset options
+- [ ] Add possibility to use refs instead of ids
