@@ -1,6 +1,6 @@
 # use-scrollspy
 
-> React scrollspy hook
+> Configurable scrollspy react hook for pairing anchor links with page sections.
 
 ## 🤔 What is it?
 
@@ -32,11 +32,15 @@ useScrollspy({
 
 ## 📝 Example
 
+_More examples will be added in the near future_
+
 Check out my [personal website](https://olivercederborg.com) to see the hook in action.<br>
 The code can be found [here](https://github.com/olivercederborg/olivercederborg.com/blob/main/app/components/navigation/navigation.tsx#L15-L20).
+
 
 ## 🛣️ Roadmap
 
 - [x] Publish to NPM
+- [ ] Add more examples
 - [ ] Add more offset options
 - [ ] Add possibility to use refs instead of ids
