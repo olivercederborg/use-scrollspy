@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import throttle from 'lodash/throttle'
-import { useWindowSize } from 'react-use'
+import useWindowSize from 'react-use/lib/useWindowSize'
 
 type UseScrollspyParameters<Id extends string> = {
   /** Ids of the sections to watch.
