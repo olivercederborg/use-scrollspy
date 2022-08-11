@@ -16,8 +16,11 @@ Check out my [personal website](https://olivercederborg.com) to see the hook in 
 ```sh
 npm i use-scrollspy
 
-# with yarn
+# yarn
 yarn add use-scrollspy
+
+# pnpm
+pnpm add use-scrollspy
 ```
 
 ## 🚀 Usage
