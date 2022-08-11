@@ -1,4 +1,4 @@
-# use-scrollspy
+# 🕵️ use-scrollspy
 
 [![npm](https://img.shields.io/npm/v/use-scrollspy)](https://www.npmjs.com/package/use-scrollspy)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-scrollspy)](https://www.npmjs.com/package/use-scrollspy)
