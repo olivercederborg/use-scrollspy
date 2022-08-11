@@ -1,5 +1,8 @@
 # use-scrollspy
 
+![npm](https://img.shields.io/npm/v/use-scrollspy)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-scrollspy)
+
 > Configurable scrollspy react hook for pairing anchor links with page sections.
 
 ## 🤔 What is it?
