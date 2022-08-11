@@ -44,12 +44,10 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "react-use": "^17.4.0"
+    "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "react": ">=16.8.6",
-    "react-dom": ">=16.8.6"
+    "react": ">=16.8.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

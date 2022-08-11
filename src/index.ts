@@ -1,18 +1,17 @@
 import { useEffect, useState } from 'react'
 
 import throttle from 'lodash/throttle'
-import useWindowSize from 'react-use/lib/useWindowSize'
+
+import { useWindowSize } from './utils/use-window-size'
 
 type UseScrollspyParameters<Id extends string> = {
-  /** Ids of the sections to watch.
-   */
+  /** Ids of the sections to watch. */
   ids: Id[]
 
-  /** Href values of the links to apply active class to.
-   */
-  hrefs: string[]
+  /** Href values of the links to apply active class to. */
+  hrefs: `/#${Id}`[]
 
-  /** Offset for when the section should be considered active.
+  /** Offset from viewport top, for when the section should be considered active.
    *
    * @default 0
    */
@@ -24,13 +23,12 @@ type UseScrollspyParameters<Id extends string> = {
    */
   activeClass?: string
 
-  /** Id of the initially active section.
-   */
+  /** Id of the initially active section. */
   initialId?: Id
 
   /** The number of milliseconds to throttle invocations to.
    *
-   * @default 200
+   * @default 250
    */
   throttleMs?: number
 }
@@ -41,7 +39,7 @@ export const useScrollspy = <Id extends string>({
   offset = 0,
   activeClass = 'active-scrollspy-item',
   initialId = ids[0],
-  throttleMs = 200,
+  throttleMs = 250,
 }: UseScrollspyParameters<Id>): Id => {
   const [activeId, setActiveId] = useState<Id>(initialId)
   const { height } = useWindowSize()
@@ -76,6 +74,7 @@ export const useScrollspy = <Id extends string>({
         setActiveId(id)
         applyActiveClass(href)
       }
+
       if (offset === 'topCenter' && top <= height / 2 && bottom > height / 2) {
         setActiveId(id)
         applyActiveClass(href)
