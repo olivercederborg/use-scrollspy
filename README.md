@@ -1,9 +1,16 @@
+<div align="center">
+<img height="256" src="https://mj-gallery.com/6c010f60-f86b-4a99-84b0-b98177497205/grid_0.png" />
+
+
 # 🕵️ use-scrollspy
 
 [![npm](https://img.shields.io/npm/v/use-scrollspy)](https://www.npmjs.com/package/use-scrollspy)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-scrollspy)](https://www.npmjs.com/package/use-scrollspy)
 
-> Configurable scrollspy react hook for pairing anchor links with page sections.
+Configurable scrollspy react hook for pairing anchor links with page sections.
+</div>
+<br>
+
 
 ## 🤔 What is it?
 
