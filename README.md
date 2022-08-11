@@ -25,12 +25,16 @@ yarn add use-scrollspy
 ```tsx
 import { useScrollspy } from 'use-scrollspy'
 
+
 useScrollspy({
   ids: ['intro', 'projects', 'about', 'contact'], // ids of the sections to watch
   hrefs: ['/#intro', '/#projects', '/#about', '/#contact'], // hrefs of the links to activate when section is active
   offset: 'topCenter', // offset for when the section should be considered active
   activeClass: 'active-nav-link', // class to apply to links when their section is active
 })
+
+// returns currently active id, in case you need it
+const activeId = useScrollspy({...})
 ```
 
 ## 📝 Example
@@ -43,7 +47,7 @@ The code can be found [here](https://github.com/olivercederborg/olivercederborg.
 
 ## 🛣️ Roadmap
 
-- [x] Publish to NPM
 - [ ] Add more examples
 - [ ] Add more offset options
 - [ ] Add possibility to use refs instead of ids
+- [ ] Expand to other frameworks: Solid, Svelte, Vue
