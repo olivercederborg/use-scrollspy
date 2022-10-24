@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import throttle from 'lodash/throttle'
+import throttle from 'lodash/throttle.js'
 
 import { useWindowSize } from './utils/use-window-size'
 
