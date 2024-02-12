@@ -52,7 +52,7 @@ const activeId = useScrollspy({...})
 _More examples will be added in the near future_
 
 Check out my [personal website](https://olivercederborg.com) to see the hook in action.<br>
-The code can be found [here](https://github.com/olivercederborg/olivercederborg.com/blob/main/app/components/navigation/navigation.tsx#L15-L20).
+The code can be found [here](https://github.com/olivercederborg/olivercederborg.com/blob/main/app/components/mobile-navigation.tsx#L59-L64).
 
 
 ## 🛣️ Roadmap
